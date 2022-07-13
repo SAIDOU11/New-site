@@ -7,10 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p {
-  font-size: 15px;
-}
-
 a,
 button {
   transition: all 0.3s ease-in-out;
@@ -33,6 +29,7 @@ a:hover {
 
 .col-sm-4 {
   color: #000000;
+  margin-bottom: 15px;
 }
 
 .bloc {
@@ -662,7 +659,7 @@ label,
 a {
   font-family: "helvetica";
   font-weight: 400;
-  color: #575757 !important;
+  color: #0a0a0a !important;
 }
 
 .container {
@@ -688,7 +685,7 @@ a {
 }
 
 p {
-  font-size: 11px;
+  font-size: 16px;
 }
 
 .tight-width-whitespace {
@@ -748,7 +745,7 @@ h4 {
 }
 
 .white {
-  color: #424242 !important;
+  color: #ffffff !important;
 }
 
 .portfolio-thumb {
@@ -945,7 +942,6 @@ h4 {
   }
 
   .padd-list {
-    padding: 20px;
   }
   .nav > li:hover {
     background: rgba(0, 0, 0, 0.08);
@@ -1049,6 +1045,8 @@ h4 {
     width: 100%;
   }
   .bloc {
+    display: flex;
+    flex-direction: column;
     padding-left: 0;
     padding-right: 0;
   }
