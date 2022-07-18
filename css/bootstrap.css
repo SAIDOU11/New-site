@@ -1,10 +1,31 @@
-*//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */.modal-open,.sr-only,svg:not(:root)
-{
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+.breadcrumb,
+.carousel-indicators,
+.dropdown-menu,
+.nav,
+.pager {
+  list-style: none;
+}
+.modal-open,
+.sr-only,
+svg:not(:root) {
   overflow: hidden;
 }
 pre,
 textarea {
   overflow: auto;
+} /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+@font-face {
+  font-family: "Glyphicons Halflings";
+  src: url(../fonts/glyphicons-halflings-regular.eot);
+  src: url(../fonts/glyphicons-halflings-regular.eot?#iefix)
+      format("embedded-opentype"),
+    url(../fonts/glyphicons-halflings-regular.woff2) format("woff2"),
+    url(../fonts/glyphicons-halflings-regular.woff) format("woff"),
+    url(../fonts/glyphicons-halflings-regular.ttf) format("truetype"),
+    url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)
+      format("svg");
+  font-display: swap;
 }
 .text-left,
 caption,
@@ -30,6 +51,7 @@ html {
 .carousel-inner > .prev,
 .collapse.in,
 .media-object,
+.nav > li,
 .navbar-brand > img,
 .open > .dropdown-menu,
 .tab-content > .active,
@@ -80,6 +102,8 @@ a:hover {
 .alert .alert-link,
 b,
 dt,
+kbd kbd,
+label,
 optgroup,
 strong {
   font-weight: 700;
@@ -141,6 +165,8 @@ textarea {
   color: inherit;
 }
 .glyphicon,
+.popover,
+.tooltip,
 address {
   font-style: normal;
 }
@@ -293,18 +319,6 @@ th {
 .open > .dropdown-toggle.btn-success,
 .open > .dropdown-toggle.btn-warning {
   background-image: none;
-}
-@font-face {
-  font-family: "Glyphicons Halflings";
-  src: url(../fonts/glyphicons-halflings-regular.eot);
-  src: url(../fonts/glyphicons-halflings-regular.eot?#iefix)
-      format("embedded-opentype"),
-    url(../fonts/glyphicons-halflings-regular.woff2) format("woff2"),
-    url(../fonts/glyphicons-halflings-regular.woff) format("woff"),
-    url(../fonts/glyphicons-halflings-regular.ttf) format("truetype"),
-    url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)
-      format("svg");
-  font-display: swap;
 }
 .glyphicon {
   position: relative;
@@ -1153,8 +1167,10 @@ figure {
   max-width: 100%;
   height: auto;
 }
+.breadcrumb > li,
 .img-thumbnail,
 .list-inline > li,
+.pagination,
 label {
   display: inline-block;
 }
@@ -1223,6 +1239,7 @@ h6 {
 legend,
 pre {
   color: #333;
+  display: block;
 }
 .h1 .small,
 .h1 small,
@@ -1251,10 +1268,6 @@ h6 small {
   font-weight: 400;
   line-height: 1;
   color: #777;
-}
-kbd kbd,
-label {
-  font-weight: 700;
 }
 address,
 blockquote .small,
@@ -1298,6 +1311,10 @@ h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.alert h4,
+.input-group-addon input[type="checkbox"],
+.input-group-addon input[type="radio"],
+.media:first-child,
 dl,
 ol,
 ul {
@@ -1583,7 +1600,12 @@ a.bg-danger:hover {
   margin: 40px 0 20px;
   border-bottom: 1px solid #eee;
 }
+.alert,
+.panel-group,
+.progress,
 .table,
+.thumbnail,
+.well,
 address,
 dl,
 legend {
@@ -1609,16 +1631,13 @@ ul ol,
 ul ul {
   margin-bottom: 0;
 }
+.btn-toolbar,
 .list-inline {
   margin-left: -5px;
 }
 .list-inline > li {
   padding-right: 5px;
   padding-left: 5px;
-}
-legend,
-pre {
-  display: block;
 }
 ul > li {
   margin: 10px;
@@ -2059,6 +2078,7 @@ legend {
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f9f9f9;
 }
+.panel-footer,
 .table-hover > tbody > tr:hover,
 .table > tbody > tr.active > td,
 .table > tbody > tr.active > th,
@@ -2071,7 +2091,8 @@ legend {
 .table > thead > tr.active > td,
 .table > thead > tr.active > th,
 .table > thead > tr > td.active,
-.table > thead > tr > th.active {
+.table > thead > tr > th.active,
+.well {
   background-color: #f5f5f5;
 }
 table col[class*="col-"] {
@@ -2084,6 +2105,23 @@ table th[class*="col-"] {
   position: static;
   display: table-cell;
   float: none;
+}
+.btn-group,
+.btn-group-vertical,
+.carousel,
+.checkbox,
+.dropdown,
+.dropup,
+.has-feedback,
+.input-group,
+.input-group .form-control,
+.input-group-btn,
+.input-group-btn > .btn,
+.nav > li,
+.nav > li > a,
+.navbar,
+.radio {
+  position: relative;
 }
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr.active:hover > th,
@@ -2323,7 +2361,6 @@ input[type="radio"][disabled] {
 }
 .checkbox,
 .radio {
-  position: relative;
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -2425,13 +2462,6 @@ select.input-lg {
   font-size: 18px;
   line-height: 1.3333333;
 }
-.carousel,
-.dropdown,
-.dropup,
-.has-feedback,
-.input-group-btn > .btn {
-  position: relative;
-}
 .has-feedback .form-control {
   padding-right: 42.5px;
 }
@@ -2519,6 +2549,8 @@ select.input-lg {
   color: #737373;
 }
 .btn,
+.btn-group,
+.btn-group-vertical,
 .caret {
   display: inline-block;
   vertical-align: middle;
@@ -3040,13 +3072,19 @@ tbody.collapse.in {
   margin: 2px 0 0;
   font-size: 14px;
   text-align: left;
-  list-style: none;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.badge,
+.input-group-addon,
+.label,
+.pager,
+.progress-bar {
+  text-align: center;
 }
 .dropdown-header,
 .dropdown-menu > li > a {
@@ -3067,12 +3105,6 @@ tbody.collapse.in {
   margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
-}
-.alert h4,
-.input-group-addon input[type="checkbox"],
-.input-group-addon input[type="radio"],
-.media:first-child {
-  margin-top: 0;
 }
 .dropdown-menu > li > a {
   clear: both;
@@ -3116,16 +3148,6 @@ tbody.collapse.in {
   left: 0;
   z-index: 990;
 }
-.btn-group,
-.btn-group-vertical,
-.input-group,
-.input-group .form-control,
-.input-group-btn,
-.nav > li,
-.nav > li > a,
-.navbar {
-  position: relative;
-}
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   content: "";
@@ -3137,11 +3159,6 @@ tbody.collapse.in {
   top: auto;
   bottom: 100%;
   margin-bottom: 2px;
-}
-.btn-group,
-.btn-group-vertical {
-  display: inline-block;
-  vertical-align: middle;
 }
 .btn-group-justified,
 .input-group {
@@ -3173,9 +3190,6 @@ tbody.collapse.in {
 .input-group-btn > .btn + .btn,
 .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
-}
-.btn-toolbar {
-  margin-left: -5px;
 }
 .btn-toolbar > .btn,
 .btn-toolbar > .btn-group,
@@ -3334,7 +3348,6 @@ tbody.collapse.in {
   font-weight: 400;
   line-height: 1;
   color: #555;
-  text-align: center;
   background-color: #eee;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -3395,10 +3408,13 @@ tbody.collapse.in {
 .nav {
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none;
 }
-.nav > li {
-  display: block;
+.navbar-collapse,
+.panel > .panel-collapse > .table caption,
+.panel > .table caption,
+.panel > .table-responsive > .table caption {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .nav > li > a {
   display: block;
@@ -3463,6 +3479,7 @@ tbody.collapse.in {
   width: 100%;
   border-bottom: 0;
 }
+.nav-justified > li > a,
 .nav-tabs.nav-justified > li > a {
   margin-bottom: 5px;
   text-align: center;
@@ -3472,16 +3489,13 @@ tbody.collapse.in {
   top: auto;
   left: auto;
 }
-.nav-pills > li > a {
+.nav-pills > li > a,
+.pagination {
   border-radius: 4px;
 }
 .nav-stacked > li + li {
   margin-top: 2px;
   margin-left: 0;
-}
-.nav-justified > li > a {
-  margin-bottom: 5px;
-  text-align: center;
 }
 .nav-tabs-justified,
 .panel-group .panel-heading,
@@ -3514,8 +3528,6 @@ tbody.collapse.in {
   border: 1px solid transparent;
 }
 .navbar-collapse {
-  padding-right: 15px;
-  padding-left: 15px;
   overflow-x: visible;
   -webkit-overflow-scrolling: touch;
   border-top: 1px solid transparent;
@@ -3586,10 +3598,6 @@ tbody.collapse.in {
 }
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
-}
-.breadcrumb > li,
-.pagination {
-  display: inline-block;
 }
 .navbar-nav {
   margin: 7.5px -15px;
@@ -3745,7 +3753,6 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
 .breadcrumb {
   padding: 8px 15px;
   margin-bottom: 20px;
-  list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
@@ -3758,9 +3765,6 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
   padding: 0 5px;
   color: #ccc;
   content: "/\00a0";
-}
-.pagination {
-  border-radius: 4px;
 }
 .label,
 .pager li,
@@ -3858,10 +3862,6 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-.pager {
-  text-align: center;
-  list-style: none;
-}
 .pager li > a,
 .pager li > span {
   display: inline-block;
@@ -3887,14 +3887,12 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
   padding: 0.2em 0.6em 0.3em;
   font-size: 75%;
   color: #fff;
-  text-align: center;
   vertical-align: baseline;
   border-radius: 0.25em;
 }
 .badge,
 .progress-bar {
   font-size: 12px;
-  text-align: center;
 }
 a.badge:focus,
 a.badge:hover,
@@ -3960,6 +3958,7 @@ a.label:hover {
   background-color: #777;
   border-radius: 10px;
 }
+.alert h4,
 .jumbotron,
 .jumbotron .h1,
 .jumbotron h1,
@@ -4005,11 +4004,6 @@ button.list-group-item-warning .list-group-item-heading {
   margin-bottom: 30px;
   background-color: #eee;
 }
-.alert,
-.progress,
-.thumbnail {
-  margin-bottom: 20px;
-}
 .jumbotron p {
   margin-bottom: 15px;
   font-size: 21px;
@@ -4051,9 +4045,6 @@ a.thumbnail:hover {
   padding: 15px;
   border: 1px solid transparent;
   border-radius: 4px;
-}
-.alert h4 {
-  color: inherit;
 }
 .alert-dismissable,
 .alert-dismissible {
@@ -4264,6 +4255,7 @@ a.thumbnail:hover {
   margin-bottom: 20px;
 }
 .list-group-item {
+  /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
   position: relative;
   display: block;
   padding: 10px 15px;
@@ -4383,6 +4375,10 @@ button.list-group-item-warning.active:hover {
   color: #a94442;
   background-color: #f2dede;
 }
+.modal-content,
+.panel {
+  background-color: #fff;
+}
 a.list-group-item-danger:focus,
 a.list-group-item-danger:hover,
 button.list-group-item-danger:focus,
@@ -4411,15 +4407,10 @@ button.list-group-item-danger.active:hover {
 }
 .panel {
   margin-bottom: 20px;
-  background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.panel-footer,
-.well {
-  background-color: #f5f5f5;
 }
 .panel-body {
   padding: 15px;
@@ -4435,10 +4426,6 @@ button.list-group-item-danger.active:hover {
   margin-bottom: 0;
   font-size: 16px;
   color: inherit;
-}
-.panel-group,
-.well {
-  margin-bottom: 20px;
 }
 .panel-footer {
   padding: 10px 15px;
@@ -4469,12 +4456,6 @@ button.list-group-item-danger.active:hover {
 .list-group + .panel-footer,
 .panel-heading + .list-group .list-group-item:first-child {
   border-top-width: 0;
-}
-.panel > .panel-collapse > .table caption,
-.panel > .table caption,
-.panel > .table-responsive > .table caption {
-  padding-right: 15px;
-  padding-left: 15px;
 }
 .panel > .table-responsive:first-child > .table:first-child,
 .panel
@@ -4788,7 +4769,6 @@ button.list-group-item-danger.active:hover {
 .popover,
 .tooltip {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
   font-weight: 400;
   line-height: 1.42857143;
   text-shadow: none;
@@ -4857,7 +4837,6 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -4910,6 +4889,10 @@ button.close {
   overflow: scroll;
 }
 @media (min-width: 768px) {
+  .navbar-form,
+  .navbar-right ~ .navbar-right {
+    margin-right: 0;
+  }
   .lead {
     font-size: 21px;
   }
@@ -5258,7 +5241,6 @@ button.close {
     width: auto;
     padding-top: 0;
     padding-bottom: 0;
-    margin-right: 0;
     margin-left: 0;
     border: 0;
     -webkit-box-shadow: none;
@@ -5275,9 +5257,6 @@ button.close {
   .navbar-right {
     float: right !important;
     margin-right: -15px;
-  }
-  .navbar-right ~ .navbar-right {
-    margin-right: 0;
   }
   .modal-dialog {
     width: 600px;
@@ -5514,6 +5493,7 @@ button.close {
   border-top-color: #000;
   bottom: 0;
 }
+.tooltip.bottom .tooltip-arrow,
 .tooltip.top .tooltip-arrow {
   left: 50%;
   margin-left: -5px;
@@ -5546,10 +5526,6 @@ button.close {
   border-width: 0 5px 5px;
   border-bottom-color: #000;
   top: 0;
-}
-.tooltip.bottom .tooltip-arrow {
-  left: 50%;
-  margin-left: -5px;
 }
 .tooltip.bottom-left .tooltip-arrow {
   right: 5px;
@@ -5846,7 +5822,6 @@ button.close {
   padding-left: 0;
   margin-left: -30%;
   text-align: center;
-  list-style: none;
 }
 .carousel-indicators li {
   display: inline-block;
