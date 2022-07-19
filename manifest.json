@@ -3,17 +3,20 @@
   "short_name": "PWA",
   "icons": [
     {
-      "src": "icons/logo512.webp",
+      "src": "icons/logo512.png",
       "type": "image/webp",
       "sizes": "512x512"
     },
     {
-      "src": "icons/logo192.webp",
+      "src": "icons/logo192.png",
       "type": "image/webp",
       "sizes": "192x192"
     }
   ],
   "start_url": "/?source=pwa",
+
   "display": "standalone",
-  "lang": "fr"
+  "lang": "fr",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF"
 }
