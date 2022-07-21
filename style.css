@@ -327,6 +327,13 @@ a:hover {
   z-index: 1;
 }
 
+.navbar2 .nav2 {
+  padding-top: 100px;
+  margin-right: -16px;
+  float: right;
+  z-index: 1;
+}
+
 .nav > li {
   float: left;
   margin-top: 4px;
@@ -372,6 +379,13 @@ a:hover {
     position: absolute;
     top: 50%;
     right: 20px;
+    transform: translate(0, -50%);
+    -webkit-transform: translateY(-50%);
+  }
+  .site-navigation2 {
+    position: absolute;
+    top: 50%;
+    padding-top: 40px;
     transform: translate(0, -50%);
     -webkit-transform: translateY(-50%);
   }
