@@ -327,13 +327,6 @@ a:hover {
   z-index: 1;
 }
 
-.navbar2 .nav2 {
-  padding-top: 100px;
-  margin-right: -16px;
-  float: right;
-  z-index: 1;
-}
-
 .nav > li {
   float: left;
   margin-top: 4px;
@@ -457,6 +450,7 @@ nav .caret {
 .mg-md {
   margin-top: 10px;
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .mg-lg {
@@ -796,8 +790,12 @@ h4 {
   background-color: #f3976c;
 }
 
+.tc-black {
+  color: #070707;
+}
+
 .tc-white {
-  color: #f3976c !important;
+  color: #ffffff !important;
 }
 
 .btn-atomic-tangerine {
@@ -815,7 +813,7 @@ h4 {
 }
 
 .ltc-white:hover {
-  color: #cccccc !important;
+  color: #ffffff !important;
 }
 
 .ltc-atomic-tangerine {
@@ -971,7 +969,7 @@ h4 {
     background: rgba(0, 0, 0, 0.8);
   }
   #hero-bloc .navbar .nav a {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255);
   }
   .hero {
     padding: 50px 0;
