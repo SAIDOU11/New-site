@@ -840,6 +840,7 @@ input[type="submit"].btn-block {
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
+    margin: 15px;
   }
   .navbar-form {
     width: auto;
